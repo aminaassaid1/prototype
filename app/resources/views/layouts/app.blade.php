@@ -22,35 +22,61 @@
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown user-menu">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-                        <img src="{{ asset('images/man.png') }}" class="user-image img-circle elevation-2"
-                            alt="User Image">
-                        <span class="d-none d-md-inline">{{ Auth::user()->nom }}</span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                        <!-- User image -->
-                        <li class="user-header bg-info">
+                @can('index-notificationController') 
+                    @if (Auth::id() && Auth::user()->name == 'apprenant')
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" data-toggle="dropdown" href="#">
+                                    <i class="far fa-bell"></i>
+                                    <span class="badge badge-warning navbar-badge">{{ count($notifications) }}</span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                                    <span class="dropdown-item dropdown-header">{{ count($notifications) . ' ' . __('pkg_notifications/notification.plural') }}</span>
+                                    <div class="dropdown-divider"></div>
+                                    @foreach ($notifications as $notification)
+                                        <a href="{{ route('notification.show', $notification->id) }}" class="dropdown-item">
+                                            <i class="fas fa-envelope mr-2"></i> {{ Str::limit($notification->titre, 25, '...') }}
+                                            <span class="float-right text-muted text-sm">{{ \Carbon\Carbon::parse($notification->updated_at)->diffForHumans(['syntax' => \Carbon\CarbonInterface::DIFF_ABSOLUTE ]) }}</span>
+                                        </a>
+                                    @endforeach
+                                    <div class="dropdown-divider"></div>
+                                    <a href="{{ route('notification.index') }}" class="dropdown-item dropdown-footer"> {{'Voir tout ' . __('pkg_notifications/notification.plural') }}</a>
+                                </div>
+                            </li>
+                        </ul>
+                    @endif                         
+                @endcan
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown user-menu">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
                             <img src="{{ asset('images/man.png') }}" class="user-image img-circle elevation-2"
                                 alt="User Image">
-                            <p>
-                                {{ Auth::user()->name }}
-                                <small>Member since {{ Auth::user()->created_at->format('M. Y') }}</small>
-                            </p>
-                        </li>
-                        <!-- Menu Footer-->
-                        <li class="user-footer">
-                            <a href="#" class="btn btn-default btn-flat">Profile</a>
-                            <a href="#" class="btn btn-default btn-flat float-right"
-                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                se déconnecter
-                            </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
-                            </form>
-                        </li>
-                    </ul>
-                </li>
+                            <span class="d-none d-md-inline">{{ Auth::user()->nom }}</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                            <!-- User image -->
+                            <li class="user-header bg-info">
+                                <img src="{{ asset('images/man.png') }}" class="user-image img-circle elevation-2"
+                                    alt="User Image">
+                                <p>
+                                    {{ Auth::user()->name }}
+                                    <small>Member since {{ Auth::user()->created_at->format('M. Y') }}</small>
+                                </p>
+                            </li>
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+                                <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                <a href="#" class="btn btn-default btn-flat float-right"
+                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    se déconnecter
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </ul>
         </nav>
         <!-- Left side column. contains the logo and sidebar -->

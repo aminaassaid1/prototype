@@ -12,7 +12,7 @@ class Notification extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title',
+        'titre',
         'message',
         'isVue',
         'apprenant_id',
@@ -20,6 +20,7 @@ class Notification extends Model
 
     public function personne()
     {
-        return $this->belongsTo(Personne::class, 'apprenant_id');
+        return $this->belongsTo(Personne::class);
     }
+
 }

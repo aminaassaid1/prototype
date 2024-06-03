@@ -13,6 +13,7 @@ use App\Http\Controllers\AppBaseController;
 use Carbon\Carbon;
 use App\Exports\GestionProjets\projetExport;
 use Maatwebsite\Excel\Facades\Excel;
+use App\Repositories\GestionProjets\TaskRepository;
 
 class ProjetController extends AppBaseController
 {
@@ -91,7 +92,6 @@ class ProjetController extends AppBaseController
         $this->projectRepository->destroy($id);
         return redirect()->route('projets.index')->with('success', 'Le projet a été supprimer avec succés.');
     }
-
 
     public function export()
     {

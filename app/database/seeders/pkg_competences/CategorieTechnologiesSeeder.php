@@ -63,6 +63,7 @@ class CategorieTechnologiesSeeder extends Seeder
                     ])->givePermissionTo($data['0']);
                 }
 
+                
                 if ($ApprenantRole) {
                     // If the role exists, update its permissions
                     if (in_array($data['0'], ['index-CategorieTechnologieController', 'show-CategorieTechnologieController', 'export-CategorieTechnologieController','import-CategorieTechnologieController'] )) {

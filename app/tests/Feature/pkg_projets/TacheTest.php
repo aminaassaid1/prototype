@@ -2,65 +2,145 @@
 
 namespace Tests\Feature\pkg_projets;
 
-use App\Models\pkg_projets\Tache;
-use Carbon\Carbon;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
+use App\Exceptions\GestionProjets\TaskAlreadyExistException;
+use App\Models\User;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
+use App\Repositories\pkg_projets\ProjetRepository;
+use App\Models\pkg_projets\Projet;
 use Tests\TestCase;
+use App\Models\pkg_projets\Tache;
+use App\Repositories\pkg_projets\TaskRepository;
 
+/**
+ * Classe de test pour tester les fonctionnalités du module de taches.
+*/
 class TacheTest extends TestCase
 {
+    use DatabaseTransactions;
+
     /**
-     * A basic feature test example.
-     */
-    public function test_create_Tache(): void
+     * Le référentiel de taches utilisé pour les tests.
+     *
+     * @var ProjetRepository
+    */
+    protected $taskRepository;
+
+    /**
+     * L'utilisateur utilisé pour les tests.
+     *
+     * @var User
+    */
+    protected $user;
+
+
+    /**
+     * Met en place les préconditions pour chaque test.
+    */
+    protected function setUp(): void
     {
-        $data =[
-            'nom'=> "Création de Backend",
-            'description'=> "Création de Partie Backend de Classe Tache",
-            'priorité' => 1,
-            'dateEchéance' => '2024/06/08',
-            'apprenant_id' => 10,
-            'personne_id' => 1,
-            'projets_id' => 1,
-            'status_tache_id' => 1,
-            'updated_at' => Carbon::now(),
-            'created_at' => Carbon::now()
+        parent::setUp();
+        $this->taskRepository = new TaskRepository(new Tache());
+        $this->user = User::factory()->create();
+    }
+
+    /**
+     * Teste la pagination des taches.
+    */
+    public function test_paginate()
+    {
+        $this->actingAs($this->user);
+        $taskData = [
+            'nom' => 'task create test',
+            'description' => 'task create test',
+            
+        ];
+        $task = $this->taskRepository->create($taskData);
+        $tasks = $this->taskRepository->paginate();
+        $this->assertNotNull($tasks);
+    }
+
+
+    /**
+     * Teste la création d'un tache.
+    */
+    public function test_create()
+    {
+        $this->actingAs($this->user);
+        $taskData = [
+            'nom' => 'task create test',
+            'description' => 'task create test',
+            
+        ];
+        $task = $this->taskRepository->create($taskData);
+        $this->assertEquals($taskData['nom'], $task->nom);
+    }
+
+    /**
+     * Teste la création d'un tach déjà existant.
+    */
+    public function test_create_task_already_exist()
+    {
+        $this->actingAs($this->user);
+
+        $task = Projet::factory()->create();
+        $taskData = [
+            'nom' => $task->nom,
+            'description' => 'task create test',
+           
         ];
 
-        $add_data = Tache::create($data);
-        $this->assertNotNull($add_data);
+        try {
+            $task = $this->taskRepository->create($taskData);
+            $this->fail('Expected taskException was not thrown');
+        } catch (TaskAlreadyExistException $e) {
+            $this->assertEquals(('La tâche existe déjà'), $e->getMessage());
+        } catch (\Exception $e) {
+            $this->fail('Unexpected exception was thrown: ' . $e->getMessage());
+        }
     }
 
-
-    public function test_update_Tache(): void
+    /**
+     * Teste la mise à jour d'un tach.
+    */
+    public function test_update()
     {
-        $data =[
-            'nom'=> "Création de Partie Backend",
-            'description'=> "Création de Partie Backend de Classe Tache",
-            'priorité' => 1,
-            'dateEchéance' => '2024/06/08',
-            'apprenant_id' => 10,
-            'projets_id' => 1,
-            'personne_id' => 1,
-            'status_tache_id' => 1,
-            'updated_at' => Carbon::now(),
-            'created_at' => Carbon::now()
+        $this->actingAs($this->user);
+        $task = Projet::factory()->create();
+        $taskData = [
+            'nom' => 'task update test',
+            'description' => 'task update test',
+           
         ];
-
-        $update_data = Tache::find(7)->update($data);
-        $this->assertNotNull($update_data);
+        $this->taskRepository->update($task->id, $taskData);
+        $this->assertDatabaseHas('taches', $taskData);
     }
 
-    public function test_delete_Tache(): void
+    /**
+     * Teste la suppression d'un tach.
+    */
+    public function test_delete_task()
     {
-        $update_data = Tache::destroy(6);
-        $this->assertNotNull($update_data);
+        $this->actingAs($this->user);
+        $task = Projet::factory()->create();
+        $this->taskRepository->destroy($task->id);
+        $this->assertDatabaseMissing('taches', ['id' => $task->id]);
     }
 
-    public function test_paginate_Tache(): void
+    /**
+     * Teste la recherche de taches.
+    */
+    public function test_task_search()
     {
-        $update_data = Tache::paginate(3);
-        $this->assertNotNull($update_data);
+        $this->actingAs($this->user);
+        $taskData = [
+            'nom' => 'tests',
+            'description' => 'search task test',
+            
+        ];
+        $this->taskRepository->create($taskData);
+        $searchValue = 'tests';
+        $searchResults = $this->taskRepository->searchData($searchValue);
+        $this->assertTrue($searchResults->contains('nom', $searchValue));
     }
+
 }

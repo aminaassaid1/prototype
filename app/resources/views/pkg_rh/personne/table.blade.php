@@ -44,7 +44,7 @@
 </div>
 
 <div class="d-md-flex justify-content-between align-items-center p-2">
-    <div class="d-flex align-items-center mb-2 ml-2 mt-2">
+    {{-- <div class="d-flex align-items-center mb-2 ml-2 mt-2">
         @can('import-PersonneController')
             <form action="{{ route($type.'.import') }}" method="post" class="mt-2" enctype="multipart/form-data"
                 id="importForm">
@@ -63,7 +63,7 @@
                     {{ __('app.export') }}</a>
             </form>
         @endcan
-    </div>
+    </div> --}}
 
     <ul class="pagination  m-0 float-right">
         {{ $personnes->onEachSide(1)->links() }}

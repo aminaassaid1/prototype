@@ -1,11 +1,11 @@
 title,message,isVue,apprenant_id
 Félicitations ,Vous avez réussi lexamen,true,1
-Notification déchec,Vous avez échoué à lexamen,false,2
-Félicitations ,Vous avez brillamment surpassé les attentes. Votre résultat est une source d'inspiration pour les autres étudiants,true,2
-Notification déchec,"Malheureusement, vos résultats ne sont pas à la hauteur des exigences. Nous vous encourageons à chercher de l'aide supplémentaire.",true,2
+Notification déchec,Vous avez échoué à lexamen,false,1
+Félicitations ,Vous avez brillamment surpassé les attentes. Votre résultat est une source d'inspiration pour les autres étudiants,true,1
+Notification déchec,"Malheureusement, vos résultats ne sont pas à la hauteur des exigences. Nous vous encourageons à chercher de l'aide supplémentaire.",true,1
 Félicitations ,Votre performance est exceptionnelle. Vous êtes un modèle pour vos pairs. Continuez votre excellent travail,false,1
 Notification déchec,Votre évaluation ne satisfait pas aux critères requis pour réussir. Nous vous encourageons à réfléchir et à travailler plus dur pour la prochaine fois,false,1
 Félicitations ,Vous avez obtenu un score exceptionnel. Votre détermination et votre travail acharné ont porté leurs fruits,true,1
-Notification déchec,"Malheureusement, votre résultat n'est pas suffisant pour passer cette épreuve. Cependant, ne vous découragez pas et continuez à persévérer",true,2
+Notification déchec,"Malheureusement, votre résultat n'est pas suffisant pour passer cette épreuve. Cependant, ne vous découragez pas et continuez à persévérer",true,1
 Félicitations ,Vous avez dépassé toutes les attentes. Votre engagement envers l'excellence est véritablement exemplaire,true,1
-Notification déchec,Votre performance n'est pas à la hauteur de vos capacités. Nous vous encourageons à consulter vos enseignants pour obtenir de l'aide supplémentaire,true,2
+Notification déchec,Votre performance n'est pas à la hauteur de vos capacités. Nous vous encourageons à consulter vos enseignants pour obtenir de l'aide supplémentaire,true,1

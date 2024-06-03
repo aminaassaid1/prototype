@@ -11,26 +11,27 @@ class Tache extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nom',
-        'description',
-        'dateEchéance',
-        'priorité',
-        'personne_id',
-        'projets_id',
-        'status_tache_id',
         'created_at',
-        'updated_at'
+        'updated_at',
+        'nom',
+        'description',  
+        'priorité',
+        'dateDebut',
+        'dateEchéance',
+        'personne_id',
+        'status_tache_id',
+        'projets_id',
     ];
 
     public function Personne(){
-        return $this->belongsTo(Personne::class);
+        return $this->belongsTo(Personne::class, 'personne_id');
     }
 
     public function Projet(){
-        return $this->belongsTo(Projet::class);
+        return $this->belongsTo(Projet::class, 'projets_id');
     }
 
     public function StatutTache(){
-        return $this->belongsTo(StatutTache::class);
+        return $this->belongsTo(StatutTache::class, 'status_tache_id');
     }
 }

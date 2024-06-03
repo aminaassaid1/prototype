@@ -50,7 +50,41 @@
         {
             "path": "./collaboration",
             "name": "collaboration"
-        }
+        },
+        {
+            "path": "./app/database/migrations/pkg_projets",
+            "name": "maquettes"
+        },
+        {
+            "path": "./app/app/Models/pkg_projets/",
+            "name":"Models"
+        },   
+        {
+            "path": "./app/resources/views/pkg_projets",
+            "name":"Views"
+        },
+        {
+            "path": "./app/app/Http/Controllers/pkg_projets",
+            "name":"Controllers"
+        },
+      
+       
+        {
+            "path": "./app/app/Repositories/pkg_projets",
+            "name":"Repositories"
+        },
+        {
+            "path": "./app/app/Http/Requests/pkg_projets",
+            "name":"requests"
+        },
+        {
+            "path": "./app/database/seeders/pkg_projets",
+            "name":"seeders"
+        },
+        {
+            "path": "./app/database/migrations/pkg_projets",
+            "name":"migrations"
+        },
     ],
     "settings": {
         "todo-tree.general.showActivityBarBadge": true,

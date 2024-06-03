@@ -8,7 +8,8 @@ return [
     'cancel' => 'Annuler',
     'export' => 'EXPORTER',
     'import' => 'IMPORTER',
-    'detail' => 'Detail',
+    'title' => 'Titre',
+    'message' => 'Message',
     'back' => 'Retour',
     'name' => 'Nom',
     'action' => 'Action',
@@ -19,4 +20,6 @@ return [
     'addSucées' => 'a été ajouté avec succès.',
     'updateSucées' => 'a été mis à jour avec succès.',
     'deleteSucées' => 'a été supprimé avec succès.',
+    'Aucune' => 'Aucune',
+    'disponible' => 'disponible',
 ];

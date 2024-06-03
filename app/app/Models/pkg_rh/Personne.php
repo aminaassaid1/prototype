@@ -6,10 +6,11 @@ use App\Models\pkg_notifications\Notification;
 use App\Models\pkg_projets\Tache;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Traits\MorphType; 
 
 class Personne extends Model
 {
-    use HasFactory;
+    use HasFactory,MorphType;
 
 
     public function groupe()

@@ -94,6 +94,7 @@ Spatie\Permission\PermissionServiceProvider::class,
        $('.select2').select2();
    });
    ```
+
 Ajoutez le code dans `'resources/js/app.js'`:
 
 10. **Spatie laravel backup**

@@ -11,9 +11,9 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::table('notifications', function (Blueprint $table) {
-            $table->string('title')->after('id');
-            $table->text('message')->nullable()->after('title');
-            $table->boolean('isVue')->after('message');
+            $table->string('titre')->after('id');
+            $table->text('message')->nullable()->after('titre');
+            $table->boolean('isVue')->default(false)->after('message');
         });
     }
 
@@ -23,7 +23,7 @@ return new class extends Migration {
     public function down(): void
     {
         Schema::table('notifications', function (Blueprint $table) {
-            $table->dropColumn('title');
+            $table->dropColumn('titre');
             $table->dropColumn('message');
             $table->dropColumn('isVue');
         });

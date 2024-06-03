@@ -1,10 +1,10 @@
-nom,description,priorité,dateEchéance,apprenant_id,projets_id,statut_tache_id
-Formulaire de connexion,Créer un formulaire de connexion utilisateur avec des champs d'e-mail et de mot de passe et gérer la soumission du formulaire pour l'authentification de l'utilisateur.,1,2024/06/08,1,1,1
-Style de la page produit,Appliquer des styles CSS à une page produit pour améliorer son apparence visuelle et l'expérience utilisateur. Garantir la réactivité sur différents appareils.,2,2024/06/15,2,1,1
-Validation du formulaire de contact,Ajouter des contrôles de validation à un formulaire de contact pour s'assurer que les utilisateurs saisissent des données valides avant de soumettre le formulaire,2,2024/06/13,3,1,1
-Intégration du partage sur les réseaux sociaux,Implémenter des boutons ou des fonctionnalités permettant aux utilisateurs de partager le contenu du site Web sur les plateformes de réseaux sociaux.,1,2024/06/10,4,1,1
-Correction du problème de mise en page responsive,Identifier et résoudre un problème spécifique avec la mise en page du site Web sur les appareils mobiles.,3,2024/06/12,0,1,3
-Mise à jour du favicon,Concevoir et implémenter un favicon (petite icône affichée dans l'onglet du navigateur) pour le site Web.,0,2024/06/08,5,1,1
-Déploiement du site Web sur un serveur de staging,Préparer et déployer le site Web sur un serveur de staging à des fins de test avant de le mettre en production.,1,2024/06/14,0,1,3
-Test utilisateur,Planifier et mener des sessions de test utilisateur pour recueillir des commentaires sur la convivialité et la fonctionnalité du site Web.,2,2024/06/20,0,1,3
-Écrire des tests unitaires pour les fonctionnalités principales,Développer des tests unitaires pour garantir que les fonctionnalités critiques du site Web fonctionnent comme prévu.,2,2024/06/18,0,1,3
+nom,description,priorité,dateDebut,dateEchéance,personne_id,projets_id,status_tache_id
+Formulaire de connexion,Créer un formulaire de connexion utilisateur avec des champs d'e-mail et de mot de passe et gérer la soumission du formulaire pour l'authentification de l'utilisateur.,1,2024/06/02,2024/06/08,1,1,1
+Style de la page produit,Appliquer des styles CSS à une page produit pour améliorer son apparence visuelle et l'expérience utilisateur. Garantir la réactivité sur différents appareils.,2,2024/06/08,2024/06/15,2,1,1
+Validation du formulaire de contact,Ajouter des contrôles de validation à un formulaire de contact pour s'assurer que les utilisateurs saisissent des données valides avant de soumettre le formulaire,2,2024/06/08,2024/06/13,3,2,1
+Intégration du partage sur les réseaux sociaux,Implémenter des boutons ou des fonctionnalités permettant aux utilisateurs de partager le contenu du site Web sur les plateformes de réseaux sociaux.,1,2024/06/08,2024/06/10,4,2,1
+Correction du problème de mise en page responsive,Identifier et résoudre un problème spécifique avec la mise en page du site Web sur les appareils mobiles.,3,2024/06/08,2024/06/12,5,1,3
+Mise à jour du favicon,Concevoir et implémenter un favicon (petite icône affichée dans l'onglet du navigateur) pour le site Web.,2,2024/06/09,2024/06/08,5,3,1
+Déploiement du site Web sur un serveur de staging,Préparer et déployer le site Web sur un serveur de staging à des fins de test avant de le mettre en production.,1,2024/06/06,2024/06/14,6,3,3
+Test utilisateur,Planifier et mener des sessions de test utilisateur pour recueillir des commentaires sur la convivialité et la fonctionnalité du site Web.,2,2024/06/14,2024/06/20,8,4,3
+Écrire des tests unitaires pour les fonctionnalités principales,Développer des tests unitaires pour garantir que les fonctionnalités critiques du site Web fonctionnent comme prévu.,2,2024/06/10,2024/06/18,7,1,3

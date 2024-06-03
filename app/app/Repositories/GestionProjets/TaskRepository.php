@@ -1,7 +1,7 @@
 <?php
-namespace App\Repositories\GestionTasks;
+namespace App\Repositories\GestionProjets;
 
-use App\Models\GestionTasks\Task;
+use App\Models\GestionProjets\Task;
 use App\Repositories\BaseRepository;
 use Illuminate\Database\Eloquent\Model;
 use App\Exceptions\GestionTasks\ProjectAlreadyExistException;

@@ -1,0 +1,1498 @@
+{
+  "actions": [
+    {
+      "name": "id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": "auto_increment"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "nom",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "controller_id",
+      "type": "bigint(20) unsigned",
+      "nullable": "YES",
+      "key": "MUL",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "permission_id",
+      "type": "bigint(20) unsigned",
+      "nullable": "YES",
+      "key": "MUL",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "parent_action_id",
+      "type": "bigint(20) unsigned",
+      "nullable": "YES",
+      "key": "MUL",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "apprenant_equipe": [
+    {
+      "name": "id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": "auto_increment"
+    },
+    {
+      "name": "equipe_id",
+      "type": "bigint(20) unsigned",
+      "nullable": "YES",
+      "key": "MUL",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "apprenant_id",
+      "type": "bigint(20) unsigned",
+      "nullable": "YES",
+      "key": "MUL",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "autorisations": [
+    {
+      "name": "id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": "auto_increment"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "action_id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "MUL",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "role_id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "MUL",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "categorie_technologies": [
+    {
+      "name": "id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": "auto_increment"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "nom",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "description",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "competences": [
+    {
+      "name": "id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": "auto_increment"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "nom",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "description",
+      "type": "text",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "controllers": [
+    {
+      "name": "id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": "auto_increment"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "nom",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "equipes": [
+    {
+      "name": "id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": "auto_increment"
+    },
+    {
+      "name": "nom",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "description",
+      "type": "text",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "projet_id",
+      "type": "bigint(20) unsigned",
+      "nullable": "YES",
+      "key": "MUL",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "failed_jobs": [
+    {
+      "name": "id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": "auto_increment"
+    },
+    {
+      "name": "uuid",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "UNI",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "connection",
+      "type": "text",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "queue",
+      "type": "text",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "payload",
+      "type": "longtext",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "exception",
+      "type": "longtext",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "failed_at",
+      "type": "timestamp",
+      "nullable": "NO",
+      "key": "",
+      "default": "CURRENT_TIMESTAMP",
+      "extra": ""
+    }
+  ],
+  "groupes": [
+    {
+      "name": "id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": "auto_increment"
+    },
+    {
+      "name": "nom",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "description",
+      "type": "varchar(255)",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "livrables": [
+    {
+      "name": "id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": "auto_increment"
+    },
+    {
+      "name": "titre",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "lien",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "description",
+      "type": "text",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "nature_livrable_id",
+      "type": "bigint(20) unsigned",
+      "nullable": "YES",
+      "key": "MUL",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "projet_id",
+      "type": "bigint(20) unsigned",
+      "nullable": "YES",
+      "key": "MUL",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "messages": [
+    {
+      "name": "id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": "auto_increment"
+    },
+    {
+      "name": "titre",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "description",
+      "type": "text",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "projet_id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "MUL",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "tache_id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "MUL",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "isLue",
+      "type": "tinyint(1)",
+      "nullable": "NO",
+      "key": "",
+      "default": "0",
+      "extra": ""
+    }
+  ],
+  "migrations": [
+    {
+      "name": "id",
+      "type": "int(10) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": "auto_increment"
+    },
+    {
+      "name": "migration",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "batch",
+      "type": "int(11)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "model_has_permissions": [
+    {
+      "name": "permission_id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "model_type",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "model_id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "model_has_roles": [
+    {
+      "name": "role_id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "model_type",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "model_id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "nature_livrables": [
+    {
+      "name": "id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": "auto_increment"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "nom",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "description",
+      "type": "text",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "niveau_competences": [
+    {
+      "name": "id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": "auto_increment"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "nom",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "description",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "notifications": [
+    {
+      "name": "id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": "auto_increment"
+    },
+    {
+      "name": "title",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "message",
+      "type": "text",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "isVue",
+      "type": "tinyint(1)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "apprenant_id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "MUL",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "password_reset_tokens": [
+    {
+      "name": "email",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "token",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "password_resets": [
+    {
+      "name": "email",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "MUL",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "token",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "permissions": [
+    {
+      "name": "id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": "auto_increment"
+    },
+    {
+      "name": "name",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "MUL",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "guard_name",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "personal_access_tokens": [
+    {
+      "name": "id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": "auto_increment"
+    },
+    {
+      "name": "tokenable_type",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "MUL",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "tokenable_id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "name",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "token",
+      "type": "varchar(64)",
+      "nullable": "NO",
+      "key": "UNI",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "abilities",
+      "type": "text",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "last_used_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "expires_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "personnes": [
+    {
+      "name": "id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": "auto_increment"
+    },
+    {
+      "name": "nom",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "prenom",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "type",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "groupe_id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "MUL",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "post_tag": [
+    {
+      "name": "id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": "auto_increment"
+    },
+    {
+      "name": "post_id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "MUL",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "tag_id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "MUL",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "posts": [
+    {
+      "name": "id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": "auto_increment"
+    },
+    {
+      "name": "nom",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "description",
+      "type": "text",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "projets": [
+    {
+      "name": "id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": "auto_increment"
+    },
+    {
+      "name": "nom",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "description",
+      "type": "varchar(255)",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "objectifs",
+      "type": "varchar(255)",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "date_debut",
+      "type": "date",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "date_echeance",
+      "type": "date",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "role_has_permissions": [
+    {
+      "name": "permission_id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "role_id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "roles": [
+    {
+      "name": "id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": "auto_increment"
+    },
+    {
+      "name": "name",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "MUL",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "guard_name",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "statut_taches": [
+    {
+      "name": "id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": "auto_increment"
+    },
+    {
+      "name": "nom",
+      "type": "text",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "description",
+      "type": "text",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "taches": [
+    {
+      "name": "id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": "auto_increment"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "nom",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "description",
+      "type": "text",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "priorité",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "dateEchéance",
+      "type": "date",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "personne_id",
+      "type": "bigint(20) unsigned",
+      "nullable": "YES",
+      "key": "MUL",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "projets_id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "MUL",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "status_tache_id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "MUL",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "tags": [
+    {
+      "name": "id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": "auto_increment"
+    },
+    {
+      "name": "nom",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "description",
+      "type": "text",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "technologies": [
+    {
+      "name": "id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": "auto_increment"
+    },
+    {
+      "name": "nom",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "description",
+      "type": "text",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "categorie_technologies_id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "MUL",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "competence_id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "MUL",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    }
+  ],
+  "users": [
+    {
+      "name": "id",
+      "type": "bigint(20) unsigned",
+      "nullable": "NO",
+      "key": "PRI",
+      "default": null,
+      "extra": "auto_increment"
+    },
+    {
+      "name": "name",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "email",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "UNI",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "email_verified_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "password",
+      "type": "varchar(255)",
+      "nullable": "NO",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "remember_token",
+      "type": "varchar(100)",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp",
+      "nullable": "YES",
+      "key": "",
+      "default": null,
+      "extra": ""
+    }
+  ]
+}

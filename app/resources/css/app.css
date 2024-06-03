@@ -11,8 +11,6 @@
 @import 'admin-lte/plugins/summernote/summernote-bs4.min.css';
 /* select2 */
 @import 'select2/dist/css/select2.min.css';
-
-
 * {
     font-family: "Nunito", sans-serif;
     scroll-behavior: smooth;
